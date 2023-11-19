@@ -25,4 +25,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
     path('',views.login,name='login'),
+     path('templates/jee.html', views.jee, name='jee_template'),
+   path('templates/gate.html', views.gate, name='gate_template'),
 ]
