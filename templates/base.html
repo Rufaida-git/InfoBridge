@@ -4,11 +4,11 @@
     <link rel="shortcut icon" type="png" href="static/img/icon/favicon.png" />
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Comaptible" content="IE=edge" />
-    <title>{% block title %}{% endblock title %} | LearnEd</title>
+    <title>{% block title %}{% endblock title %} | InfoBridge</title>
     <meta name="desciption" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/static/style.css" />
-    <script src="/static/script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script>
       $(window).on("scroll", function () {
@@ -25,14 +25,14 @@
     <header id="header">
       <nav>
         <div class="logo">
-          <img src="static/img/icon/logo.png" alt="logo" />
+          <img src="static/img/icon/infobridge-logo.png" alt="logo" />
         </div>
         <ul>
           <li><a class="active" href="">Home</a></li>
           <li><a href="#portfolio_section">Portfolio</a></li>
-          <li><a href="#team_section">Team</a></li>
+          {% comment %} <li><a href="#team_section">Team</a></li> {% endcomment %}
           <li><a href="#services_section">Services</a></li>
-          <li><a href="#contactus_section">Contact</a></li>
+          {% comment %} <li><a href="#contactus_section">Contact</a></li> {% endcomment %}
         </ul>
         <div class="srch">
           <input type="text" class="search" placeholder="Search here..." /><img
@@ -41,7 +41,7 @@
             onclick="slide()"
           />
         </div>
-        <a class="get-started" href="/login">Get Started</a>
+        <a class="get-started" href="login.html">Get Started</a>
         <img
           src="static/img/icon/menu.png"
           class="menu"
@@ -92,23 +92,24 @@
           <li><a href="#feedBACK">Feedback</a></li>
         </ul>
       </div>
+
     </header>
 
     <!-- Some Popular Subjects -->
     <div class="title">
-      <span>Popular Subjects on LearnEd</span>
+      <span>Popular Subjects on Infobridge</span>
     </div>
     <br /><br />
     <div class="course">
       <center>
         <div class="cbox">
           <div class="det">
-            <a href="subjects/jee.html"
+            <a href="templates/jee.html"
               ><img src="static/img/courses/book.png" />JEE Preparation</a
             >
           </div>
           <div class="det">
-            <a href="subjects/gate.html"
+            <a href="templates/gate.html"
               ><img src="static/img/courses/d1.png" />GATE Preparation</a
             >
           </div>
@@ -126,7 +127,7 @@
       </center>
       <div class="cbox">
         <div class="det">
-          <a href="subjects/computer_courses.html"
+          <a href="templates/computer_courses.html"
             ><img src="static/img/courses/computer.png" />Computer Courses</a
           >
         </div>
@@ -149,7 +150,7 @@
     </div>
 
     <!-- ABOUT -->
-    <div class="diffSection" id="about_section">
+    {% comment %} <div class="diffSection" id="about_section">
       <center><p style="font-size: 50px; padding: 100px">About</p></center>
       <div class="about-content">
         <div class="side-image">
@@ -172,7 +173,7 @@
           </p>
         </div>
       </div>
-    </div>
+    </div> {% endcomment %}
 
     <!-- PORTFOLIO -->
     <div class="diffSection" id="portfolio_section">
@@ -222,7 +223,7 @@
     </div>
 
     <!-- TEAM -->
-    <div class="diffSection" id="team_section">
+    {% comment %} <div class="diffSection" id="team_section">
       <center>
         <p style="font-size: 50px; padding-top: 100px; padding-bottom: 60px">
           We're the Creators
@@ -268,7 +269,7 @@
           </center>
         </div>
       </div>
-    </div>
+    </div> {% endcomment %}
 
     <!-- SERVICES -->
     <div class="service-swipe">
@@ -286,13 +287,13 @@
           </p>
         </center>
       </div>
-      <a href="subjects/computer_courses.html"
+      <a href="templates/computer_courses.html"
         ><div class="s-card">
           <img src="static/img/icon/computer-courses.png" />
           <p>Free Online Computer Courses</p>
         </div></a
       >
-      <a href="subjects/jee.html"
+      <a href="templates/jee.html"
         ><div class="s-card">
           <img src="static/img/icon/brainbooster.png" />
           <p>Building Concepts for Competitive Exams</p>
@@ -597,3 +598,4 @@
     {% block body %} {% endblock body %}
   </body>
 </html>
+
