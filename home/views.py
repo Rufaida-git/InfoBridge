@@ -34,3 +34,11 @@ def login_view(request):
 # @login_required
 def base(request):
     return render(request, 'base.html')
+
+def jee(request):
+    # Your view logic goes here
+    return render(request, 'jee.html', context={})
+
+def gate(request):
+    # Your view logic goes here
+    return render(request, 'gate.html', context={})
